@@ -67,10 +67,12 @@ const BlogPostTemplate = props => {
             style={{
               ...scale(-1 / 5),
               paddingTop: 10,
+              opacity: 0.9,
             }}
           >
-            Posted {timeSince(parseISOString(post.frontmatter.date))} -{" "}
+            Posted {timeSince(parseISOString(post.frontmatter.date))} ~{" "}
             {post.fields.readingTime.text}
+            {" ☕"}
           </p>
         </header>
         <MDXRenderer>{post.body}</MDXRenderer>
