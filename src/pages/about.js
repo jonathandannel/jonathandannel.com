@@ -30,12 +30,13 @@ const About = ({ location }) => {
     <Layout location={location}>
       <h2>About me</h2>
       <p>
-        I'm a software developer living in Toronto. My to day work primarily
-        entails building React frontends and Node APIs, but I also have a keen
-        interest in functional programming, WebGL, and machine learning. I'm a
-        polyglot; I enjoy learning new programming languages and playing around
-        with all sorts of different patterns, frameworks, and libraries. At the
-        moment, I'm learning Clojure and am absolutely enamored of it.
+        I'm a software developer living in Toronto, Ontario. My day to day work
+        primarily entails building React frontends and Node APIs, but I also
+        have a keen interest in functional programming, WebGL, and machine
+        learning. I'm a polyglot; I enjoy learning new programming languages and
+        playing around with all sorts of different patterns, frameworks, and
+        libraries. I'm learning Clojure at the moment, and I'm absolutely
+        enamored of it.
       </p>
       <hr />
       <h2>Tech stack</h2>
@@ -62,17 +63,17 @@ const About = ({ location }) => {
       <hr />
       <h2>My story</h2>
       <p>
-        I discovered my love of tinkering with computers when I was about 10
-        years old during a series of ill-fated overclocking experiments which
-        ultimately led to building a new one from scratch. Despite my early
-        affinity for tech, it wasn't until much later on in life that I actually
-        decided to make a career out of it. I spent most of my 20s writing,
-        traveling, and doing volunteer work on organic farms while picking away
-        at university classes. In 2013, I taught myself Ruby, and immediately
-        realized that I had found my calling. Since then, I have been
-        professionally involved in a number of exciting projects and codebases.
-        I am extremely passionate about what I do, and I love working on
-        challenging problems that allow me to hone my craft and think in new
+        I discovered my love for tinkering with computers when I was about 10
+        years old, during a series of ill-fated overclocking experiments which
+        ultimately led to having to build a new one from scratch. Despite my
+        early interest in tech, it wasn't until much later on in life that I
+        actually decided to make a career out of it. I spent most of my early
+        20s writing, traveling, and doing volunteer work on organic farms while
+        picking away at university. In 2014, I taught myself Ruby, and
+        immediately realized that I had found my calling. Since then, I have
+        been professionally involved in a number of exciting projects and
+        codebases. I am extremely passionate about what I do, and I love working
+        on challenging problems that allow me to hone my craft and think in new
         ways.
       </p>
       <hr />

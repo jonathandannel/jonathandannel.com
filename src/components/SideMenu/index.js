@@ -76,8 +76,8 @@ const SideMenu = ({ location, rootPath, isSearch }) => {
         <SiteLogo />
         <p>
           Hey, I'm <StyledLink href="/about">Jonathan Dannel</StyledLink>, a
-          software developer based in Toronto, Ontario. I love programming,
-          writing, and learning new things.{" "}
+          software developer based in Toronto. I love programming, writing, and
+          learning new things.{" "}
         </p>
 
         <DarkModeToggle />

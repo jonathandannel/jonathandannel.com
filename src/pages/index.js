@@ -31,6 +31,7 @@ const Index = ({ location, data }) => {
     }
   }
 
+  c
   useEvent(`scroll`, handleScroll)
 
   return (
