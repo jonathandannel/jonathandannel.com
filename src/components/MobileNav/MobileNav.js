@@ -27,7 +27,7 @@ const Navbar = () => {
           position: fixed;
           z-index: 6;
           margin-top: 3px;
-          margin-left: -32px;
+          margin-left: -25px;
           left: 50%;
           transform: scale(0.5);
         `}
