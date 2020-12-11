@@ -79,11 +79,11 @@ const BlogPostTemplate = props => {
 
         <footer>
           <>
-            <hr
+            {/* <hr
               style={{
                 marginBottom: rhythm(1),
               }}
-            />
+            /> */}
             {/* <CommentsFB /> */}
             {/* <Bio /> */}
           </>
