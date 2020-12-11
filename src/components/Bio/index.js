@@ -13,13 +13,6 @@ const BioWrapper = styled.div`
   padding-top: 30px;
 `
 
-const IconsWrapper = styled.div`
-  display: grid;
-  grid-gap: 15px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-bottom: 20px;
-`
-
 const BioInnerWrapper = styled.div`
   display: flex;
   flex-direction: row;

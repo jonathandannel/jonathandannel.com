@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import "styled-components/macro"
-import Bio from "../components/Bio"
+// import Bio from "../components/Bio"
 import Layout from "../components/layout"
 import SEO from "../components/Seo"
 import { rhythm, scale } from "../utils/typography"
