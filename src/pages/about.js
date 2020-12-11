@@ -30,13 +30,12 @@ const About = ({ location }) => {
     <Layout location={location}>
       <h2>About me</h2>
       <p>
-        I'm a software developer living in Toronto, Ontario, Canada. My to day
-        work primarily entails building React frontends and Node APIs, but I
-        also have a keen interest in functional programming, WebGL, and machine
-        learning. I'm a polyglot; I enjoy learning new programming languages and
-        playing around with all sorts of different patterns, frameworks, and
-        libraries. At the moment, I'm learning Clojure and am seriously
-        infatuated with it.
+        I'm a software developer living in Toronto. My to day work primarily
+        entails building React frontends and Node APIs, but I also have a keen
+        interest in functional programming, WebGL, and machine learning. I'm a
+        polyglot; I enjoy learning new programming languages and playing around
+        with all sorts of different patterns, frameworks, and libraries. At the
+        moment, I'm learning Clojure and am absolutely enamored of it.
       </p>
       <hr />
       <h2>Tech stack</h2>
