@@ -3,7 +3,7 @@ import gray from "gray-percentage"
 import { MOBILE_MEDIA_QUERY } from "typography-breakpoint-constants"
 import verticalRhythm from "compass-vertical-rhythm"
 
-import '../styles/global.css'
+import "../styles/global.css"
 
 const typography = new Typography({
   title: "Fairy Gates",
@@ -12,22 +12,22 @@ const typography = new Typography({
   googleFonts: [
     {
       name: "Work Sans",
-      styles: ["600"],
+      styles: ["400", "500"],
     },
     {
       name: "Quattrocento Sans",
-      styles: ["400", "400i", "700"],
+      styles: ["400", "400i", "500", "700"],
     },
   ],
   headerFontFamily: ["Work Sans", "sans-serif"],
   bodyFontFamily: ["Quattrocento Sans", "sans-serif"],
-  headerColor: 'var(--headerCol)',
-  bodyColor: 'var(--bodyCol)',
-  headerWeight: "600",
+  headerColor: "var(--headerCol)",
+  bodyColor: "var(--bodyCol)",
+  headerWeight: 500,
   bodyWeight: 400,
-  boldWeight: 700,
+  boldWeight: 500,
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => {
-    const linkColor =   'var(--textLink)'
+    const linkColor = "var(--textLink)"
     const vr = verticalRhythm({
       baseFontSize: "17px",
       baseLineHeight: "24.65px",
@@ -43,7 +43,6 @@ const typography = new Typography({
         backgroundImage: "none",
         textDecoration: "none",
         color: "var(--headerCol)",
-    
       },
       "h1,h2,h3,h4,h5,h6": {
         marginTop: rhythm(1),

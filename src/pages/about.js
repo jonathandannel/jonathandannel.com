@@ -1,25 +1,21 @@
 import React from "react"
 import Layout from "../components/layout"
 import styled from "styled-components"
+import { SocialIcon } from "react-social-icons"
 
 import {
   JavascriptIcon,
   TypescriptIcon,
   ReactIcon,
-  D3Icon,
-  PostgresIcon,
-  DockerIcon,
-  AWSIcon,
-  NodeIcon,
-  GatsbyIcon,
+  RubyIcon,
+  RailsIcon,
+  ReduxIcon,
+  ClojureIcon,
+  SqlIcon,
   PythonIcon,
-  VSCodeIcon,
-  GitHubIcon,
-  IllustratorIcon,
-  PhotoshopIcon,
-  AppleIcon,
-  WindowsIcon,
   LinuxIcon,
+  VimIcon,
+  ExpressIcon,
 } from "../components/Icons"
 
 const IconWrapper = styled.div`
@@ -32,46 +28,64 @@ const IconWrapper = styled.div`
 const About = ({ location }) => {
   return (
     <Layout location={location}>
-      <h2>This is a page example</h2>
+      <h2>About me</h2>
       <p>
-        Nulla nulla sapien, ultrices vitae erat non, eleifend fermentum ipsum.
-        Maecenas eget nisl turpis. Mauris tempus velit dui, vel commodo tortor
-        ullamcorper vitae. Etiam condimentum neque in lectus sodales dictum.
-        Vivamus vel lorem quis eros auctor dictum eu eu ante. Mauris sagittis
-        eget ipsum ut ultrices. Pellentesque iaculis, metus ut blandit posuere,
-        tortor arcu lobortis leo, a porta ipsum nisl ac nisl. Nam commodo
-        finibus ligula, ac mattis massa efficitur et. Pellentesque sit amet urna
-        luctus, maximus sapien eu, dictum felis. Suspendisse feugiat orci ac
-        finibus pellentesque. Pellentesque suscipit nec neque non cursus. Nullam
-        dictum aliquam odio ut posuere.
-        <br />
-        <br /> Add more icons from https://konpa.github.io/devicon/
+        I'm a software developer living in Toronto, Ontario, Canada. My to day
+        work primarily entails building React frontends and Node APIs, but I
+        also have a keen interest in functional programming, WebGL, and machine
+        learning. I'm a polyglot; I enjoy learning new programming languages and
+        playing around with all sorts of different patterns, frameworks, and
+        libraries. At the moment, I'm learning Clojure and am seriously
+        infatuated with it.
       </p>
-      <h4>Technologies:</h4>
+      <h2>Tech stack</h2>
+      <h4>Work</h4>
       <IconWrapper>
         <JavascriptIcon />
         <TypescriptIcon />
+        <ExpressIcon />
         <ReactIcon />
-        <D3Icon />
-        <PostgresIcon />
-        <DockerIcon />
-        <AWSIcon />
-        <NodeIcon />
-        <GatsbyIcon />
-        <PythonIcon />
+        <ReduxIcon />
+        <SqlIcon />
       </IconWrapper>
-      <h4>Tools:</h4>
+      <h4>Personal</h4>
       <IconWrapper>
-        <VSCodeIcon />
-        <GitHubIcon />
-        <IllustratorIcon />
-        <PhotoshopIcon />
-        <AppleIcon />
-        <WindowsIcon />
+        <PythonIcon />
+        <RubyIcon />
+        <RailsIcon />
+        <ClojureIcon />
+        <VimIcon />
         <LinuxIcon />
       </IconWrapper>
       <br />
       <hr />
+      <h2>My story</h2>
+      <p>
+        I discovered my love of tinkering with computers when I was about 10
+        years old during a series of ill-fated overclocking experiments which
+        ultimately led to building a new one from scratch. Despite my early
+        affinity for tech, it wasn't until much later on in life that I actually
+        decided to make a career out of it. I spent most of my 20s writing,
+        traveling, and doing volunteer work on organic farms while picking away
+        at university classes. In 2013, I taught myself Ruby, and immediately
+        realized that I had found my calling. Since then, I have been
+        professionally involved in a number of exciting projects and codebases.
+        I am extremely passionate about what I do, and I love working on
+        challenging problems that allow me to hone my craft and think in new
+        ways.
+      </p>
+      <IconWrapper>
+        <SocialIcon
+          url="http://linkedin.com/in/jonathandannel"
+          style={{ height: 32, width: 32 }}
+          bgColor={"var(--logo)"}
+        />
+        <SocialIcon
+          style={{ height: 32, width: 32 }}
+          url="http://github.com/jonathandannel"
+          bgColor={"var(--logo)"}
+        />
+      </IconWrapper>
     </Layout>
   )
 }

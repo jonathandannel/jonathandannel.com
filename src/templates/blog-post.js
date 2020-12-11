@@ -5,7 +5,7 @@ import Bio from "../components/Bio"
 import Layout from "../components/layout"
 import SEO from "../components/Seo"
 import { rhythm, scale } from "../utils/typography"
-import CommentsFB from "../components/CommentsFB"
+// import CommentsFB from "../components/CommentsFB"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const intervals = [
@@ -82,8 +82,8 @@ const BlogPostTemplate = props => {
                 marginBottom: rhythm(1),
               }}
             />
-            <CommentsFB />
-            <Bio />
+            {/* <CommentsFB /> */}
+            {/* <Bio /> */}
           </>
         </footer>
       </article>

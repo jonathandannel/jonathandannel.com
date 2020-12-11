@@ -6,9 +6,9 @@ body {
   --textNormal: #222;
   --bodyCol: #222;
   --headerCol: #222;
-  --textLink: #2293a7;
+  --textLink:#bd3453;
   --mobDD: black;
-  --logo: black;
+  --logo: #bd3453;
   --icons: black;
   --gridLine: #bebebe;
 }
@@ -36,8 +36,7 @@ body.dark {
   --textNormal: rgba(255, 255, 255, 0.88);
   --bodyCol: rgb(184, 184, 184);
   --headerCol: white;
-  --textLink: #2293a7;
-
+  --textLink: #a1b0ff;
   --mobDD: white;
   --logo: white;
   --icons: white;

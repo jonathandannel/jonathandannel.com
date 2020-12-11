@@ -7,12 +7,23 @@ import { rhythm } from "../../utils/typography"
 
 const BioWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding-top: 30px;
 `
+
+const IconsWrapper = styled.div`
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 20px;
+`
+
 const BioInnerWrapper = styled.div`
   display: flex;
+  flex-direction: row;
+  padding-bottom: 0px;
 `
 
 const BioTextWrapper = styled.div`
@@ -41,11 +52,7 @@ const Bio = () => {
   const { author, bio } = data.site.siteMetadata
   return (
     <BioWrapper>
-      <BioInnerWrapper
-        css={`
-          margin-bottom: ${rhythm(1)};
-        `}
-      >
+      <BioInnerWrapper>
         <Image
           fixed={data.avatar.childImageSharp.fixed}
           alt={author}

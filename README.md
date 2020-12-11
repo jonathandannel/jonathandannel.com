@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+   <img width="60" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg">
   </a>
 </p>
 <h1 align="center">
@@ -9,9 +9,9 @@
 </h1>
 
 <h4 align="center">A basic starter for creating blogs using Gatsby.</h4>
-
+<p align="center"><a href="https://attackingpixels.com">Attacking Pixels Blog - Example<a></p>
+  
 ![Baysik Starter Gatsby](screen.png)
-
 
 ## Quick Start
 
@@ -23,6 +23,8 @@ Use the Gatsby CLI to create a new site, specifying the Baysik starter.
 # Create a new Gatsby site using the Baysik starter
 gatsby new baysik-blog https://github.com/adamistheanswer/gatsby-starter-baysik-blog
 ```
+
+[Official Gatsby Starter Page](https://www.gatsbyjs.org/starters/adamistheanswer/gatsby-starter-baysik-blog/)
 
 #### Start Developing
 
@@ -39,10 +41,17 @@ Your site is now running at `http://localhost:8000`!
 
 Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).
 
-
-# Changelog
+## Changelog
 
 All notable changes to this project will be documented in this file.
+
+## [3.0.0] - 2020-11-07
+
+### Added
+
+- Dependency updates
+- Major refactor
+- Post catagories added!
 
 ## [2.0.0] - 2020-07-01
 
@@ -52,6 +61,7 @@ All notable changes to this project will be documented in this file.
 - MDX for embedding React components into individual blog posts
 
 ### Changed
+
 - Almost everything
 
 ## [1.0.0] - 2019-11-01
@@ -63,4 +73,3 @@ All notable changes to this project will be documented in this file.
 - [] Quickstart Guide
 - [] User can setup mostly from gatsby-config
 - [] Social Icons & Dev Icons improve implimentation
-- [] Trim the fat!
