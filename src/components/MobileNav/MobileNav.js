@@ -26,13 +26,13 @@ const Navbar = () => {
         css={`
           position: fixed;
           z-index: 6;
-          margin-top: -11px;
+          margin-top: 3px;
           margin-left: -32px;
           left: 50%;
-          transform: scale(0.32);
+          transform: scale(0.5);
         `}
       >
-        <SiteLogo />
+        <SiteLogo m={true} />
       </div>
 
       <div

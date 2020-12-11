@@ -11,16 +11,16 @@ const typography = new Typography({
   baseLineHeight: 1.45,
   googleFonts: [
     {
-      name: "Work Sans",
+      name: "Lato",
       styles: ["400", "500"],
     },
     {
-      name: "Quattrocento Sans",
+      name: "PT Sans",
       styles: ["400", "400i", "500", "700"],
     },
   ],
-  headerFontFamily: ["Work Sans", "sans-serif"],
-  bodyFontFamily: ["Quattrocento Sans", "sans-serif"],
+  headerFontFamily: ["Lato", "sans-serif"],
+  bodyFontFamily: ["PT Sans", "sans-serif"],
   headerColor: "var(--headerCol)",
   bodyColor: "var(--bodyCol)",
   headerWeight: 500,

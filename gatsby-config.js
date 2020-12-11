@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Jonathan Dannel's code blog`,
+    title: `Jonathan Dannel's Blog`,
     author: `Jonathan Dannel`,
-    description: ``,
+    description: `An incomplete compendium of mostly interesting things`,
     siteUrl: `http://jonathandannel.com/`,
     bio: ``,
     facebookToken: ``,

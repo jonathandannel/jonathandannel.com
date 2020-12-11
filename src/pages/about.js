@@ -38,6 +38,7 @@ const About = ({ location }) => {
         libraries. At the moment, I'm learning Clojure and am seriously
         infatuated with it.
       </p>
+      <hr />
       <h2>Tech stack</h2>
       <h4>Work</h4>
       <IconWrapper>
@@ -57,6 +58,7 @@ const About = ({ location }) => {
         <VimIcon />
         <LinuxIcon />
       </IconWrapper>
+
       <br />
       <hr />
       <h2>My story</h2>
@@ -74,6 +76,8 @@ const About = ({ location }) => {
         challenging problems that allow me to hone my craft and think in new
         ways.
       </p>
+      <hr />
+      <h2>Get in touch</h2>
       <IconWrapper>
         <SocialIcon
           url="http://linkedin.com/in/jonathandannel"

@@ -53,6 +53,7 @@ const Layout = ({ location, title, children, postCount, isSearch }) => {
                   padding-top: 70px;
                   padding-left: 20px;
                   padding-right: 20px;
+                  padding-bottom: 60px;
                 `}
               >
                 <DisplaySizeProvider
@@ -82,6 +83,7 @@ const Layout = ({ location, title, children, postCount, isSearch }) => {
                 <main
                   css={`
                     margin-left: 350px;
+                    padding-bottom: 40px;
                   `}
                 >
                   <DisplaySizeProvider
