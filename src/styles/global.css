@@ -6,10 +6,10 @@ body {
   --textNormal: #222;
   --bodyCol: #222;
   --headerCol: #222;
-  --textLink: #c13152f7;
+  --icons: #c13152f7;
   --mobDD: black;
   --logo: black;
-  --icons: #2293a7;
+  --textLink: #c13152f7;
   --gridLine: #bebebe;
   --shadow: lightgrey;
 }
@@ -37,7 +37,7 @@ body.dark {
   --textNormal: rgba(255, 255, 255, 0.88);
   --bodyCol: rgb(184, 184, 184);
   --headerCol: white;
-  --textLink: white;
+  --textLink: #8beeff;
   --mobDD: white;
   --logo: white;
   --icons: white;

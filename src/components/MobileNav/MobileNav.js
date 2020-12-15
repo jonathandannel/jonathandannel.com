@@ -29,7 +29,7 @@ const Navbar = () => {
       height: "100vh",
       left: "0 !important",
       top: "0 !important",
-      maxHeight: "300px",
+      maxHeight: "290px",
       paddingTop: "65px",
       background: "var(--bg)",
     },
@@ -86,7 +86,7 @@ const Navbar = () => {
           onClick={openMenu}
           style={{
             transform: "translateY(-1px)",
-            color: "var(--icons)",
+            color: "var(--logo)",
           }}
         >
           <MenuIcon style={{ height: 24 }} />
@@ -96,7 +96,7 @@ const Navbar = () => {
           onClick={closeMenu}
           style={{
             transform: "translateY(-1px)",
-            color: "var(--icons)",
+            color: "var(--logo)",
           }}
         >
           <CloseIcon style={{ height: 24 }} />

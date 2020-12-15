@@ -12,11 +12,11 @@ const typography = new Typography({
   googleFonts: [
     {
       name: "Lato",
-      styles: ["400", "500"],
+      styles: ["300", "400", "500"],
     },
     {
       name: "PT Sans",
-      styles: ["400", "400i", "500", "700"],
+      styles: ["300", "400", "400i", "500", "700"],
     },
   ],
   headerFontFamily: ["Lato", "sans-serif"],
@@ -24,7 +24,7 @@ const typography = new Typography({
   headerColor: "var(--headerCol)",
   bodyColor: "var(--bodyCol)",
   headerWeight: 500,
-  bodyWeight: 400,
+  bodyWeight: 300,
   boldWeight: 500,
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => {
     const linkColor = "var(--textLink)"
