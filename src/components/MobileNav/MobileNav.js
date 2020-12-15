@@ -66,7 +66,7 @@ const Navbar = () => {
         className={styles.centerVert}
         style={{
           padding: "12px",
-          transform: "scale(0.9) translateY(2px)",
+          transform: "scale(0.9) translateY(3px)",
         }}
       >
         <DarkModeToggle />
