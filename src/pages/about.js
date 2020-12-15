@@ -4,7 +4,6 @@ import styled from "styled-components"
 import { SocialIcon } from "react-social-icons"
 
 import {
-  JavascriptIcon,
   TypescriptIcon,
   ReactIcon,
   RubyIcon,
@@ -16,12 +15,10 @@ import {
   LinuxIcon,
   VimIcon,
   MongoIcon,
-  WebpackIcon,
-  ExpressIcon,
+  GitIcon,
   DockerIcon,
-  MaterialUiIcon,
-  GatsbyIcon,
   DebianIcon,
+  ClojurescriptIcon,
 } from "../components/Icons"
 
 const IconWrapper = styled.div`
@@ -53,7 +50,6 @@ const About = ({ location }) => {
       <h2>Tech stack</h2>
       <h4>Work</h4>
       <IconWrapper>
-        <JavascriptIcon />
         <TypescriptIcon />
         <ReactIcon />
         <ReduxIcon />
@@ -65,15 +61,15 @@ const About = ({ location }) => {
         <PythonIcon />
         <RubyIcon />
         <RailsIcon />
-        <GatsbyIcon />
         <ClojureIcon />
+        <ClojurescriptIcon />
       </IconWrapper>
       <h4>Tools</h4>
       <IconWrapper>
         <VimIcon />
         <LinuxIcon />
         <DebianIcon />
-        <WebpackIcon />
+        <GitIcon />
         <DockerIcon />
       </IconWrapper>
       <br />
@@ -91,8 +87,8 @@ const About = ({ location }) => {
         about what I do, and I love working on challenging problems that allow
         me to hone my craft and think in new ways.
       </p>
-      <hr />
-      <h2>Get in touch</h2>
+      {/* <hr /> */}
+      {/* <h2>Get in touch</h2>
       <IconWrapper>
         <SocialIcon
           url="http://linkedin.com/in/jonathandannel"
@@ -104,7 +100,7 @@ const About = ({ location }) => {
           url="http://github.com/jonathandannel"
           bgColor={"var(--logo)"}
         />
-      </IconWrapper>
+      </IconWrapper> */}
     </Layout>
   )
 }

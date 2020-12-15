@@ -89,7 +89,7 @@ const Navbar = () => {
             color: "var(--logo)",
           }}
         >
-          <MenuIcon style={{ height: 25 }} />
+          <MenuIcon style={{ height: 24 }} />
         </IconButton>
       ) : (
         <IconButton
@@ -99,13 +99,13 @@ const Navbar = () => {
             color: "var(--logo)",
           }}
         >
-          <CloseIcon style={{ height: 25 }} />
+          <CloseIcon style={{ height: 24 }} />
         </IconButton>
       )}
       <Menu
         style={{ width: "100%", display: "flex", flexDirection: "column" }}
         hideBackdrop={true}
-        transitionComponent={Fade}
+        transitioncomponent={Fade}
         elevation={0}
         open={menuOpen}
         PopoverClasses={{
