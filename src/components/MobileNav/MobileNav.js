@@ -1,170 +1,137 @@
-import React from "react"
+import React, { useState } from "react"
+import { AppBar, IconButton, Menu, MenuItem, Fade } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
+import MenuIcon from "@material-ui/icons/Menu"
+import CloseIcon from "@material-ui/icons/Close"
 import DarkModeToggle from "../DarkModeToggle"
 import SiteLogo from "../SiteLogo"
 import "styled-components/macro"
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const openMenu = () => setMenuOpen(true)
+  const closeMenu = () => setMenuOpen(false)
+
+  const menuStyles = makeStyles(() => ({
+    popoverRoot: {
+      zIndex: "0 !important",
+      height: "100%",
+    },
+    popoverPaper: {
+      width: "100%",
+      maxWidth: "100%",
+      height: "100%",
+      left: 0,
+      top: 0,
+    },
+    menuPaper: {
+      width: "100%",
+      height: "100vh",
+      left: "0 !important",
+      top: "0 !important",
+      maxHeight: "40vh",
+      paddingTop: "65px",
+      background: "var(--bg)",
+    },
+    menuItem: {
+      display: "flex",
+      justifyContent: "center",
+      fontFamily: "unset",
+      fontSize: "unset",
+    },
+    centerVert: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-around",
+    },
+    noBoxShadow: {
+      boxShadow: "none !important",
+    },
+  }))
+
+  const styles = menuStyles()
+
   return (
-    <div>
+    <AppBar
+      elevation={null}
+      style={{
+        display: "flex",
+        padding: "0.2em 0.2em 0",
+        flexDirection: "row",
+        background: "var(--bg)",
+        height: 55,
+      }}
+    >
       <div
-        css={`
-          position: fixed;
-          z-index: 4;
-          margin-left: 20px;
-          top: 17px;
-        `}
+        className={styles.centerVert}
+        style={{
+          padding: "12px",
+          transform: "scale(0.9) translateY(2px)",
+        }}
       >
-        <DarkModeToggle
-          css={`
-            position: fixed;
-            top: 10px;
-            z-index: 5;
-          `}
-        />
+        <DarkModeToggle />
       </div>
+      <div style={{ flexGrow: 1 }}></div>
       <div
-        css={`
-          position: fixed;
-          z-index: 6;
-          margin-top: 3px;
-          margin-left: -25px;
-          left: 50%;
-          transform: scale(0.5);
-        `}
+        className={styles.centerVert}
+        style={{
+          transform: "scale(0.55)",
+        }}
       >
-        <SiteLogo m={true} />
+        <SiteLogo />
       </div>
-
-      <div
-        css={`
-          /* header */
-          .header {
-            background: var(--bg);
-            box-shadow: 1px 1px 4px 0 var(--shadow);
-            position: fixed;
-            left: 0;
-            width: 100%;
-            z-index: 1;
-          }
-
-          .header ul {
-            text-align: center;
-            width: 100%;
-            margin: auto;
-            padding: 0;
-            list-style: none;
-            overflow: hidden;
-            background: var(--bg);
-          }
-
-          .header li a {
-            display: block;
-            padding: 10px 10px;
-            text-decoration: none;
-          }
-
-          .header li a:hover,
-          .header .menu-btn:hover {
-            background-color: var(--shadow);
-          }
-
-          /* menu */
-
-          .header .menu {
-            clear: both;
-            max-height: 0;
-            transition: max-height 0.2s ease-out;
-          }
-
-          /* menu icon */
-
-          .header .menu-icon {
-            cursor: pointer;
-            display: inline-block;
-            float: right;
-            padding: 28px 20px;
-            position: relative;
-            user-select: none;
-          }
-
-          .header .menu-icon .navicon {
-            background: var(--logo);
-            display: block;
-            height: 2px;
-            position: relative;
-            transition: background 0.2s ease-out;
-            width: 18px;
-          }
-
-          .header .menu-icon .navicon:before,
-          .header .menu-icon .navicon:after {
-            background: var(--logo);
-            content: "";
-            display: block;
-            height: 100%;
-            position: absolute;
-            transition: all 0.2s ease-out;
-            width: 100%;
-          }
-
-          .header .menu-icon .navicon:before {
-            top: 5px;
-          }
-
-          .header .menu-icon .navicon:after {
-            top: -5px;
-          }
-
-          /* menu btn */
-
-          .header .menu-btn {
-            display: none;
-          }
-
-          .header .menu-btn:checked ~ .menu {
-            max-height: 240px;
-          }
-
-          .header .menu-btn:checked ~ .menu-icon .navicon {
-            background: transparent;
-          }
-
-          .header .menu-btn:checked ~ .menu-icon .navicon:before {
-            transform: rotate(-45deg);
-          }
-
-          .header .menu-btn:checked ~ .menu-icon .navicon:after {
-            transform: rotate(45deg);
-          }
-
-          .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-          .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-            top: 0;
-          }
-        `}
+      <div style={{ flexGrow: 1 }}></div>
+      {!menuOpen ? (
+        <IconButton
+          onClick={openMenu}
+          style={{
+            transform: "translateY(-1px)",
+            color: "var(--logo)",
+          }}
+        >
+          <MenuIcon style={{ height: 25 }} />
+        </IconButton>
+      ) : (
+        <IconButton
+          onClick={closeMenu}
+          style={{
+            transform: "translateY(-1px)",
+            color: "var(--logo)",
+          }}
+        >
+          <CloseIcon style={{ height: 25 }} />
+        </IconButton>
+      )}
+      <Menu
+        style={{ width: "100%", display: "flex", flexDirection: "column" }}
+        hideBackdrop={true}
+        transitionComponent={Fade}
+        elevation={0}
+        open={menuOpen}
+        PopoverClasses={{
+          root: styles.popoverRoot,
+          paper: styles.popoverPaper,
+        }}
+        PaperProps={{ classes: { root: styles.noBoxShadow } }}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        transformOrigin={{ vertical: "top", horizontal: "center" }}
+        getContentAnchorEl={null}
+        classes={{ paper: styles.menuPaper }}
       >
-        <div className="header">
-          <input className="menu-btn" type="checkbox" id="menu-btn" />
-          <label className="menu-icon" htmlFor="menu-btn">
-            <span className="navicon"></span>
-          </label>
-          <ul className="menu">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="/tags">Tags</a>
-            </li>
-            <li>
-              <a href="/search">Search</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+        <MenuItem className={styles.menuItem}>
+          <a href="/">Home</a>
+        </MenuItem>
+        <MenuItem className={styles.menuItem}>
+          <a href="/about">About</a>
+        </MenuItem>
+        <MenuItem className={styles.menuItem}>
+          <a href="/tags">Tags</a>
+        </MenuItem>
+        <MenuItem className={styles.menuItem}>
+          <a href="/Search">Search</a>
+        </MenuItem>
+      </Menu>
+    </AppBar>
   )
 }
 

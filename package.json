@@ -9,6 +9,8 @@
   },
   "homepage": "https://attackingpixels.com",
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
     "@mdx-js/mdx": "^1.6.19",
     "@mdx-js/react": "^1.6.19",
     "babel-plugin-styled-components": "1.10.6",

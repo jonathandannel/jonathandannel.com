@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Layout from "../components/layout"
 import styled from "styled-components"
 import { SocialIcon } from "react-social-icons"
@@ -15,7 +15,13 @@ import {
   PythonIcon,
   LinuxIcon,
   VimIcon,
+  MongoIcon,
+  WebpackIcon,
   ExpressIcon,
+  DockerIcon,
+  MaterialUiIcon,
+  GatsbyIcon,
+  DebianIcon,
 } from "../components/Icons"
 
 const IconWrapper = styled.div`
@@ -26,6 +32,11 @@ const IconWrapper = styled.div`
 `
 
 const About = ({ location }) => {
+  useEffect(() => {
+    window.scrollTo(0, 50)
+    window.scrollTo(0, 0)
+  }, [location])
+
   return (
     <Layout location={location}>
       <h2>About me</h2>
@@ -44,37 +55,41 @@ const About = ({ location }) => {
       <IconWrapper>
         <JavascriptIcon />
         <TypescriptIcon />
-        <ExpressIcon />
         <ReactIcon />
         <ReduxIcon />
         <SqlIcon />
+        <MongoIcon />
       </IconWrapper>
       <h4>Personal</h4>
       <IconWrapper>
         <PythonIcon />
         <RubyIcon />
         <RailsIcon />
+        <GatsbyIcon />
         <ClojureIcon />
+      </IconWrapper>
+      <h4>Tools</h4>
+      <IconWrapper>
         <VimIcon />
         <LinuxIcon />
+        <DebianIcon />
+        <WebpackIcon />
+        <DockerIcon />
       </IconWrapper>
-
       <br />
       <hr />
       <h2>My story</h2>
       <p>
         I discovered my love for tinkering with computers when I was about 10
-        years old, during a series of ill-fated overclocking experiments which
-        ultimately led to having to build a new one from scratch. Despite my
-        early interest in tech, it wasn't until much later on in life that I
-        actually decided to make a career out of it. I spent most of my early
-        20s writing, traveling, and doing volunteer work on organic farms while
-        picking away at university. In 2014, I taught myself Ruby, and
-        immediately realized that I had found my calling. Since then, I have
-        been professionally involved in a number of exciting projects and
-        codebases. I am extremely passionate about what I do, and I love working
-        on challenging problems that allow me to hone my craft and think in new
-        ways.
+        years old; I really enjoyed building computers and dabbling in
+        HTML/Flash. Despite my early interest in tech, it wasn't until much
+        later on in life that I decided to make a career out of it. I spent most
+        of my early 20s writing, traveling, and doing volunteer work on organic
+        farms. In 2014, I taught myself Ruby, and immediately realized that I
+        had found my calling. Since then, I have been professionally involved in
+        a number of exciting projects and codebases. I am extremely passionate
+        about what I do, and I love working on challenging problems that allow
+        me to hone my craft and think in new ways.
       </p>
       <hr />
       <h2>Get in touch</h2>

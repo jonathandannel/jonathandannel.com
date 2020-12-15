@@ -6,11 +6,12 @@ body {
   --textNormal: #222;
   --bodyCol: #222;
   --headerCol: #222;
-  --textLink: #bd3453;
+  --textLink: #2293a7;
   --mobDD: black;
-  --logo: #bd3453;
+  --logo: black;
   --icons: black;
   --gridLine: #bebebe;
+  --shadow: lightgrey;
 }
 
 hr {
@@ -36,11 +37,13 @@ body.dark {
   --textNormal: rgba(255, 255, 255, 0.88);
   --bodyCol: rgb(184, 184, 184);
   --headerCol: white;
-  --textLink: #a1b0ff;
+  --textLink: #2293a7;
+
   --mobDD: white;
   --logo: white;
   --icons: white;
   --gridLine: #eeeeee6c;
+  --shadow: #272525;
 }
 
 /*  */
@@ -248,4 +251,8 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
+}
+
+.MuiPaper-root {
+  box-shadow: 1px 1px 4px 0 var(--shadow);
 }
