@@ -29,7 +29,7 @@ const Navbar = () => {
       height: "100vh",
       left: "0 !important",
       top: "0 !important",
-      maxHeight: "40vh",
+      maxHeight: "300px",
       paddingTop: "65px",
       background: "var(--bg)",
     },
@@ -75,7 +75,7 @@ const Navbar = () => {
       <div
         className={styles.centerVert}
         style={{
-          transform: "scale(0.55)",
+          transform: "scale(0.5)",
         }}
       >
         <SiteLogo />
