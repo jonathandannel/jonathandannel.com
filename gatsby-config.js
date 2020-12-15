@@ -186,6 +186,7 @@ module.exports = {
         name: `Website Name`,
         short_name: `Shortname`,
         start_url: `/`,
+        icon: "content/assets/icon.png",
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,

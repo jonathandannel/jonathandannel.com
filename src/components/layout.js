@@ -1,4 +1,4 @@
-import React, { createContext, Suspense } from "react"
+import React, { createContext } from "react"
 import { rhythm } from "../utils/typography"
 import SideMenu from "./SideMenu"
 import styled from "styled-components"
@@ -41,21 +41,50 @@ const Layout = ({ location, title, children, postCount, isSearch }) => {
   const isMobileOrTablet = useMediaQuery({ query: "(max-width: 1024px)" })
 
   return (
-    isMobileOrTablet && (
-      <Suspense fallback={null}>
-        <ThemeToggler>
-          {({ toggleTheme }) => (
-            <>
-              {isMobileOrTablet ? (
-                <>
-                  <Navbar location={location} />
+    isMobileOrTablet !== undefined && (
+      <ThemeToggler>
+        {({ toggleTheme }) => (
+          <>
+            {isMobileOrTablet ? (
+              <>
+                <Navbar location={location} />
+                <main
+                  css={`
+                    position: relative;
+                    padding-top: 70px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    padding-bottom: 60px;
+                  `}
+                >
+                  <DisplaySizeProvider
+                    value={{ isMobileOrTablet: isMobileOrTablet }}
+                  >
+                    {children}
+                  </DisplaySizeProvider>
+                </main>
+              </>
+            ) : (
+              <DesktopLayoutWrapper>
+                <SideMenu
+                  postCount={postCount}
+                  toggleTheme={toggleTheme}
+                  location={location}
+                  rootPath={rootPath}
+                  title={title}
+                  isSearch={isSearch}
+                ></SideMenu>
+
+                <HorizontalWrapper
+                  css={`
+                    max-width: ${rhythm(50)};
+                  `}
+                >
+                  <VerticalDivider />
                   <main
                     css={`
-                      position: relative;
-                      padding-top: 70px;
-                      padding-left: 20px;
-                      padding-right: 20px;
-                      padding-bottom: 60px;
+                      margin-left: 350px;
+                      padding-bottom: 40px;
                     `}
                   >
                     <DisplaySizeProvider
@@ -64,43 +93,12 @@ const Layout = ({ location, title, children, postCount, isSearch }) => {
                       {children}
                     </DisplaySizeProvider>
                   </main>
-                </>
-              ) : (
-                <DesktopLayoutWrapper>
-                  <SideMenu
-                    postCount={postCount}
-                    toggleTheme={toggleTheme}
-                    location={location}
-                    rootPath={rootPath}
-                    title={title}
-                    isSearch={isSearch}
-                  ></SideMenu>
-
-                  <HorizontalWrapper
-                    css={`
-                      max-width: ${rhythm(50)};
-                    `}
-                  >
-                    <VerticalDivider />
-                    <main
-                      css={`
-                        margin-left: 350px;
-                        padding-bottom: 40px;
-                      `}
-                    >
-                      <DisplaySizeProvider
-                        value={{ isMobileOrTablet: isMobileOrTablet }}
-                      >
-                        {children}
-                      </DisplaySizeProvider>
-                    </main>
-                  </HorizontalWrapper>
-                </DesktopLayoutWrapper>
-              )}
-            </>
-          )}
-        </ThemeToggler>
-      </Suspense>
+                </HorizontalWrapper>
+              </DesktopLayoutWrapper>
+            )}
+          </>
+        )}
+      </ThemeToggler>
     )
   )
 }
