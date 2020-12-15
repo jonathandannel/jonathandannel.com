@@ -86,7 +86,7 @@ const Navbar = () => {
           onClick={openMenu}
           style={{
             transform: "translateY(-1px)",
-            color: "var(--logo)",
+            color: "var(--icons)",
           }}
         >
           <MenuIcon style={{ height: 24 }} />
@@ -96,7 +96,7 @@ const Navbar = () => {
           onClick={closeMenu}
           style={{
             transform: "translateY(-1px)",
-            color: "var(--logo)",
+            color: "var(--icons)",
           }}
         >
           <CloseIcon style={{ height: 24 }} />

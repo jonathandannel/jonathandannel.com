@@ -23,7 +23,7 @@ const DarkModeToggle = () => {
               width="27"
               viewBox="0 0 48 48"
               xmlns="http://www.w3.org/2000/svg"
-              fill="var(--logo)"
+              fill="var(--icons)"
             >
               <path
                 d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
