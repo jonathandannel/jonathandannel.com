@@ -1,4 +1,4 @@
-import React, { createContext } from "react"
+import React, { createContext, useEffect, useState } from "react"
 import { rhythm } from "../utils/typography"
 import SideMenu from "./SideMenu"
 import styled from "styled-components"
@@ -39,8 +39,14 @@ const DesktopLayoutWrapper = styled.div`
 const Layout = ({ location, title, children, postCount, isSearch }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isMobileOrTablet = useMediaQuery({ query: "(max-width: 1024px)" })
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 10)
+  }, [location, setLoading])
 
   return (
+    !loading &&
     isMobileOrTablet !== undefined && (
       <ThemeToggler>
         {({ toggleTheme }) => (
