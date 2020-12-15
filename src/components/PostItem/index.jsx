@@ -45,14 +45,14 @@ const PostItem = ({ slug, title, imageSrc, description, excerpt, tags }) => {
         css={`
           border-radius: 50%;
           z-index: -9999;
-          min-width: 70px;
-          min-height: 70px;
-          width: 70px;
-          height: 70px;
+          min-width: 65px;
+          min-height: 65px;
+          width: 65px;
+          height: 65px;
           position: relative;
           overflow: hidden;
           display: inline-block;
-          margin-right: 30px;
+          margin-right: 15px;
           margin-bottom: 0px;
         `}
       />
@@ -64,7 +64,7 @@ const PostItem = ({ slug, title, imageSrc, description, excerpt, tags }) => {
         css={`
           border-radius: 50%;
           z-index: -9999;
-          margin-right: 30px;
+          margin-right: 20px;
         `}
       />
     )
