@@ -19,6 +19,24 @@ Let's test some code highlighting:
 const a = b => b.reduce((a, e) => (a += e), 0)
 ```
 
+```clojure
+(def bit-bucket-writer
+  (proxy [java.io.Writer] []
+    (write [buf] nil)
+    (close []    nil)
+    (flush []    nil)))
+
+(defmacro noprint
+  "Evaluates the given `forms` with all printing to `*out*` silenced."
+  [& forms]
+  `(binding [*out* bit-bucket-writer]
+     ~@forms))
+
+(noprint
+  (println "Hello, nobody!"))
+;; => nil
+```
+
 ## Grab a patched font of your choice
 
 - Extract <a>this</a> tarball into your `$HOME/.local/share/fonts` directory

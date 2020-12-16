@@ -59,7 +59,7 @@ const Navbar = () => {
         padding: "0.2em 0.2em 0",
         flexDirection: "row",
         background: "var(--bg)",
-        height: 55,
+        height: 60,
       }}
     >
       <div
