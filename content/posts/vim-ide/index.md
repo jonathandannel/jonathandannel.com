@@ -1,6 +1,7 @@
 ---
 title: Turn vim into a fully fledged IDE
 description: It's not actually that hard
+author: "Jonathan Dannel"
 category: "code"
 cover: geo.jpg
 date: "2019-12-17T00:00:00.001Z"
