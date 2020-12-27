@@ -89,6 +89,7 @@ const Layout = ({ location, title, children, postCount, isSearch }) => {
                   <VerticalDivider />
                   <main
                     css={`
+                      overflow-x: hidden;
                       margin-left: 350px;
                       padding-bottom: 40px;
                     `}
