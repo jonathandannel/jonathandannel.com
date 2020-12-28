@@ -22,18 +22,21 @@ This step-by-step introductory post is written with the intention of simplifying
 
 Neovim is basically a more modern fork of vim, introducing some (argurable) performance and quality of life improvements. It's backwards compatible with most vanilla vim features/plugins and adds some new ones too.
 
-Detailed, platform specific instructions can be found on the <a href="https://github.com/neovim/neovim/wiki/Installing-Neovim">repo</a>.
+Detailed, platform specific instructions can be found on the <a href="https://github.com/neovim/neovim/wiki/Installing-Neovim">neovim repo</a>.
 
 For simplicity, I always prefer using a package manager.
 
-On Arch and derivatives:
-`sudo pacman -S neovim`
+- On Arch and derivatives:
 
-On Debian/Ubuntu:
-`sudo apt install neovim`
+  - `sudo pacman -S neovim`
 
-If you're on a Mac:
-`brew install neovim`
+- On Debian/Ubuntu:
+
+  - `sudo apt install neovim`
+
+- If you're on a Mac:
+
+  - `brew install neovim`
 
 ## Install a plugin manager for vim
 
@@ -56,7 +59,7 @@ If you followed the above install script or added `vim-plug` via other means, th
 
 This is where your nvim config exists now. Note: You can migrate your vanilla vim settings by adding the line `source ~/.vimrc` (or wherever your .vimrc is).
 
-## Edit `init.vim`
+## Edit init.vim
 
 Add these two lines to your config:
 
@@ -200,20 +203,16 @@ Now, refresh your font cache (or log in/out):
 
 In your terminal settings, you can now specify that font as the default. If you're using a terminal without a GUI for setting options, like alacritty, you need to specify the actual family for the font.
 
-Run `fc-list | grep Fira` and you should get something back like ```
-/home/jonathan/.local/share/fonts/Fira Mono Regular Nerd Font Complete.otf: FiraMono Nerd Font:style=Regular
-
-```
+Run `fc-list | grep Fira` and you should get something back like
+`/home/jonathan/.local/share/fonts/Fira Mono Regular Nerd Font Complete.otf: FiraMono Nerd Font:style=Regular`
 
 The actual name of the font, in this case, is `FiraMono Nerd Font`. So you'd specify it that way in your alacritty config:
 
-```
-
+```yaml
 font:
-normal:
-family: FiraMono Nerd Font
-size: 10
-
+  normal:
+    family: FiraMono Nerd Font
+    size: 10
 ```
 
 Reload your terminal and you should now see all your nice new icons when you open nvim.
@@ -221,20 +220,21 @@ Reload your terminal and you should now see all your nice new icons when you ope
 There are more streamlined ways of adding patched fonts (various scripts and such), but I find this method pretty quick and hassle free. You can check the powerline/nerd repos and docs for more methods if this one doesn't suit you.
 
 ### Add some transparency (questionable)
+
 Sometimes it's nice to have a little bit of transparency in your terminal. However, if you change your terminal's opacity, your theme background will still be a solid color. Adding this line to your config can fix that:
 
-```
-
+```bash
 :hi! Normal guibg=NONE
-
-````
+```
 
 This can be kind of distracting, but I like it sometimes.
 
 ## Adding functionality
+
 Now that we're more or less through with making things look pretty, know how to add plugins, and understand how to edit the config, let's run through a bunch of small additions in quick succession.
 
 ### Fuzzy finding (CTRL + P to open file)
+
 Probably my favorite plugin. It renders the file tree pretty useless once you're used to just launching new splits from `fzf`. This, in turn, saves screen space and allows you room for another split or two.
 
 In your plugin block:
@@ -242,7 +242,7 @@ In your plugin block:
 ```bash
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-````
+```
 
 In the body of your config, add some custom binds to launch splits from fzf (or else fzf files will open in the current pane). Also, bind this to the familiar `CTRL` + `p`.
 
@@ -328,7 +328,7 @@ inoremap kj <Esc>
 
 ### Yank to clipboard
 
-```
+```bash
 :set clipboard=unnamedplus
 ```
 
@@ -340,7 +340,7 @@ inoremap kj <Esc>
 
 Add it as a plugin:
 
-```
+```bash
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 ```
 
@@ -352,7 +352,7 @@ We can either run an install command within nvim (`:CocInstall <extension>`) or 
 
 In init.vim:
 
-```
+```bash
 let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-tsserver']
 let g:coc_disable_startup_warning = 1
 ```
@@ -367,14 +367,14 @@ Open up nvim and run `:CocInstall`. Nice!
 
 Add `coc-prettier` to the list in g:coc_global_extensions, then add the following under the other coc settings:
 
-```
+```bash
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:prettier#autoformat = 1
 ```
 
 Create a file in your `nvim` directory called `coc-settings.json` and add a line for configuring formatting on save:
 
-```
+```bash
 { "coc.preferences.formatOnSaveFiletypes": ["*"] }
 ```
 
@@ -386,7 +386,7 @@ Install, reload, and prettier should be working properly and responding to the r
 
 Same as above. Add `coc-eslint`, and in your `coc-settings.json` add:
 
-```
+```bash
 "eslint.options": { "configFile": "C:/mydirectory/.eslintrc.json" }
 ```
 
@@ -397,3 +397,7 @@ More detailed instructions can be found here: https://github.com/neoclide/coc-es
 There are TONS of plugins, scripts, and complex hacks to make vim do exactly what you want. This was a very basic introduction to getting your config started up and functional for every day use, but there's so much more to explore, and so many cool ways to extend your config. If the vim workflow suits you, it may be worthwhile looking into a terminal multiplexer like `tmux` or a tiling window manager like `i3`. Those are way out of the scope of this post, but worthwhile to keep in mind.
 
 Thanks for reading, and happy hacking :)
+
+```
+
+```
