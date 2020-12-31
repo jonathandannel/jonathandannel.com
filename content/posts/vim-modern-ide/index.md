@@ -181,7 +181,7 @@ Choose a theme from the list (https://github.com/vim-airline/vim-airline-themes/
 
 I'm going to set it as `gruvbox` since the gruvbox theme we imported actually has some entries for airline colors already included. But feel free to add anything you want! You can also change the airline colorscheme or look for a new one on the fly inside nvim by typing `:AirlineTheme` and pressing `Tab` to get a list of all themes.
 
-```bash
+```javascript
 let g:airline_theme='gruvbox'
 ```
 
@@ -191,7 +191,7 @@ Keep in mind that since we've enabled powerline fonts, the nice glyphs it gives 
 
 - ### Adding icons
 
-```bash
+```javascript
 Plug 'ryanoasis/vim-devicons'
 ```
 
@@ -239,7 +239,7 @@ There are more streamlined ways of adding patched fonts (various scripts and suc
 
 Sometimes it's nice to have a little bit of transparency in your terminal. However, if you change your terminal's opacity, your vim theme background will still be a solid color. Adding this line to your config can fix that:
 
-```bash
+```javascript
 :hi! Normal guibg=NONE
 ```
 
@@ -262,7 +262,7 @@ Plug 'junegunn/fzf.vim'
 
 In the body of your config, add some custom binds to launch splits from fzf (or else fzf files will open in the current pane). Also, bind this to the familiar `CTRL` + `p`.
 
-```bash
+```javascript
 nnoremap <C-p> :FZF<CR>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
@@ -283,7 +283,7 @@ Plug 'alvan/vim-closetag'
 
 And some config:
 
-```bash
+```javascript
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*jsx'
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js'
 let g:closetag_filetypes = 'html,xhtml,phtml,*.js'
@@ -302,7 +302,7 @@ https://github.com/tpope/vim-fugitive
 
 Run git commands in vim, and more
 
-```bash
+```javascript
 Plug 'tpope/vim-fugitive'
 ```
 
@@ -310,7 +310,7 @@ Plug 'tpope/vim-fugitive'
 
 https://github.com/airblade/vim-gitgutter
 
-```bash
+```javascript
 Plug 'airblade/vim-gitgutter'
 ```
 
@@ -318,7 +318,7 @@ Plug 'airblade/vim-gitgutter'
 
 https://github.com/preservim/nerdcommenter
 
-``` bash
+```javascript
 Plug 'airblade/vim-gitgutter'
 ```
 
@@ -328,14 +328,14 @@ https://github.com/jiangmiao/auto-pairs
 
 > Note: This could get annoying if not configured correctly. Check the repo and docs.
 
-```bash
+```javascript
 Plug 'jiangmiao/auto-pairs'
 ```
 
 - ### Or surround.vim
 
 https://github.com/tpope/vim-surround
-```bash
+```javascript
 Plug 'tpope/vim-surround'
 ```
 
@@ -343,7 +343,7 @@ Plug 'tpope/vim-surround'
 
 https://github.com/tpope/vim-obsession
 
-```bash
+```javascript
 Plug 'tpope/vim-obsession'
 ```
 
@@ -357,7 +357,7 @@ All the different ways to remap vim's core bindings are out of the scope of this
 
 - Use `ALT` + `h j k l` to move between splits
 
-```bash
+```javascript
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
 tnoremap <A-k> <C-\><C-n><C-w>k
@@ -370,7 +370,7 @@ nnoremap <A-l> <C-w>l
 
 - Remap `ESC` in insert mode
 
-```bash
+```javascript
 inoremap jk <Esc>
 inoremap kj <Esc>
 ```
@@ -379,7 +379,7 @@ Remapping keys is totally subjective, so I'll leave it at that.
 
 - ### Yank to clipboard
 
-```bash
+```javascript
 :set clipboard=unnamedplus
 ```
 
