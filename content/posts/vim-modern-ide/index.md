@@ -355,7 +355,7 @@ Now you can type `:Obsession` to start tracking your vim session (open buffers, 
 
 All the different ways to remap vim's core bindings are out of the scope of this post, but here are a couple of simple ones that make life a little easier.
 
-- Use `ALT` + `h j k l` to move between splits
+Use `ALT` + `h j k l` to move between splits:
 
 ```javascript
 tnoremap <A-h> <C-\><C-n><C-w>h
@@ -368,7 +368,7 @@ nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 ```
 
-- Remap `ESC` in insert mode
+Remap `ESC` in insert mode:
 
 ```javascript
 inoremap jk <Esc>
@@ -384,17 +384,17 @@ Remapping keys is totally subjective, so I'll leave it at that.
 ```
 
 - ### Indentation
-- `:set tabstop=2`: The amount of spaces a tab is equal to.
-- `:set autoindent`: New lines inherit the indentation of previous lines.
-- `:set expandtab`: Convert tabs to spaces.
-- `:set shiftround`: When shifting lines, round the indentation to the nearest multiple of “shiftwidth.”
-- `:set shiftwidth=2`: When shifting, indent using four spaces.
-- `:set smarttab`: Insert “tabstop” number of spaces when the “tab” key is pressed.
+ `:set tabstop=2`: The amount of spaces a tab is equal to.
+ `:set autoindent`: New lines inherit the indentation of previous lines.
+ `:set expandtab`: Convert tabs to spaces.
+ `:set shiftround`: When shifting lines, round the indentation to the nearest multiple of “shiftwidth.”
+ `:set shiftwidth=2`: When shifting, indent using four spaces.
+ `:set smarttab`: Insert “tabstop” number of spaces when the “tab” key is pressed.
 
 - ### Searching
 
-- `:set ignorecase`: Ignore case when searching.
-- `:set smartcase`: Automatically switch search to case-sensitive when search query contains an uppercase letter.
+ `:set ignorecase`: Ignore case when searching.
+ `:set smartcase`: Automatically switch search to case-sensitive when search query contains an uppercase letter.
 
 ## Language specific functionality
 
@@ -462,7 +462,7 @@ Same as above. Add `coc-eslint`, and in your `coc-settings.json` add:
 "eslint.options": { "configFile": "C:/mydirectory/.eslintrc.json" }
 ```
 
-`coc-eslint` is super customizable and interoperable with prettier. More detailed instructions can be found [in the eslint docs] (https://github.com/neoclide/coc-eslint) and [prettier docs](https://github.com/neoclide/coc-prettier)
+`coc-eslint` is super customizable and interoperable with prettier. More detailed instructions can be found [in the eslint docs](https://github.com/neoclide/coc-eslint) and [prettier docs](https://github.com/neoclide/coc-prettier)
 
 Linters and formatters for other languages generally work in similar ways, so be sure to give them a try.
 
