@@ -1,14 +1,14 @@
 ---
 title: How to switch to Vim and be happy
-description: A step by step guide
+description: A step by step guide to a modern Vim setup 
 author: "Jonathan Dannel"
 category: "tutorial"
 cover: vim-3.png
 date: "2020-12-30T00:00:00.001Z"
-tags: ["workflow", "vim", "vim-plug", "tutorial", "guide", "neovim", "tmux", "i3", "setup"]
+tags: ["workflow", "vim", "config", "setup", "tutorial", "guide"]
 ---
 
-I learned the very basics of vim a few years ago as a junior editing my first server config files over SSH. I honestly found it pretty arcane while using it to do anything meaningful (or upon being thrown into it during Git merges), which turned me off from it for a long time. However, ever so often along my professional journey, I would encounter the rare developer sporting an impressive vim + tmux setup that, as an uninitiated observer, seemed mystical and esoteric. Each time I witnessed the effortlessness in which these sorcerers could hop around large codebases, edit at superhuman speed, and multitask — all without a mouse or traditional GUI — I was inspired.
+I learned the very basics of [vim](https://www.vim.org/) a few years ago as a junior editing my first server config files over SSH. I honestly found it pretty arcane while using it to do anything meaningful (or upon being thrown into it during Git merges), which turned me off from it for a long time. However, ever so often along my professional journey, I would encounter the rare developer sporting an impressive vim + tmux setup that, as an uninitiated observer, seemed mystical and esoteric. Each time I witnessed the effortlessness in which these sorcerers could hop around large codebases, edit at superhuman speed, and multitask — all without a mouse or traditional GUI — I was inspired.
 
 My vim journey personally began in earnest a few years later when I finally committed to `vimtutor`, bought a [book](https://www.amazon.ca/Practical-Vim-Edit-Speed-Thought/dp/1680501275) on vim, and forced myself to use [vim mode](https://github.com/VSCodeVim/Vim) in VSCode. After a while, I started gaining real proficiency and wondered about the next steps.
 
@@ -489,4 +489,4 @@ Those are way out of the scope of this post, but worthwhile to keep in mind (and
 
 > Before setting yourself up for disappointment: Vim, as awesome as it is, isn't the be all end all of text editors and is not always a suitable replacement for an IDE. If, for example, you're developing huge enterprise Java applications with lots of build scripts or Android/iOS apps requiring tons platform specific plugins, it's probably not the right tool for the job. It works awesomely for me, though, and so I wanted to share my experience with you.
 
-Thanks for reading, and happy hacking :)
+Thanks for reading, and happy hacking! 🦝 
