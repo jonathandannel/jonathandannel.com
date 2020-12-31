@@ -1,11 +1,11 @@
 ---
-title: How to switch to Vim and be happy
+title: How to switch to Vim and be happy in 2021
 description: A step by step guide to a modern Vim setup 
 author: "Jonathan Dannel"
 category: "tutorial"
 cover: vim-3.png
 date: "2020-12-30T00:00:00.001Z"
-tags: ["workflow", "vim", "config", "setup", "tutorial", "guide"]
+tags: ["workflow", "vim", "tutorial"]
 ---
 
 I learned the very basics of [vim](https://www.vim.org/) a few years ago as a junior editing my first server config files over SSH. I honestly found it pretty arcane while using it to do anything meaningful (or upon being thrown into it during Git merges), which turned me off from it for a long time. However, ever so often along my professional journey, I would encounter the rare developer sporting an impressive vim + tmux setup that, as an uninitiated observer, seemed mystical and esoteric. Each time I witnessed the effortlessness in which these sorcerers could hop around large codebases, edit at superhuman speed, and multitask — all without a mouse or traditional GUI — I was inspired.
@@ -208,7 +208,8 @@ Two decent options are:
 
 I really like the selection of Nerd fonts, so let's go with those.
 
-Navigate to the font you want to use. Fira Mono is a decent and unoffensive choice for now..
+Navigate to the font you want to use. Fira Mono is a decent and unoffensive choice for now:
+
 https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraMono/Regular
 
 In the `complete` dir, grab the .ttf file you want (`Fira Mono Regular Nerd Font Complete.otf`) and move it to `~/.local/share/fonts/`. You may have to create this directory if it doesn't exist.
@@ -469,7 +470,7 @@ Same as above. Add `coc-eslint`, and in your `coc-settings.json` add:
 "eslint.options": { "configFile": "C:/mydirectory/.eslintrc.json" }
 ```
 
-`coc-eslint` is super customizable and interoperable with prettier. More detailed instructions can be found [in the eslint docs](https://github.com/neoclide/coc-eslint) and [prettier docs](https://github.com/neoclide/coc-prettier)
+`coc-eslint` is super customizable and interoperable with prettier. More detailed instructions can be found [in the eslint docs](https://github.com/neoclide/coc-eslint) and [prettier docs](https://github.com/neoclide/coc-prettier).
 
 Linters and formatters for other languages generally work in similar ways, so be sure to give them a try.
 
@@ -490,7 +491,7 @@ If the vim workflow suits you, it may be worthwhile looking into two things to r
 - A terminal multiplexer like `tmux`. Google it, it's incredible. It's an integral part of many vim users' setups. 
 - A tiling window manager (if you're on Linux). This can replace a lot of what tmux brings to the table, except if you require persistent SSH connections. 
   - [i3wm](https://i3wm.org/)
-  - [awesome](https://awesomewm.org/)
+  - [awesomewm](https://awesomewm.org/)
 
 Those are way out of the scope of this post, but worthwhile to keep in mind (and in my opinion, pretty necessary additions to a productive workflow). I personally <strong>love</strong> i3. 
 
