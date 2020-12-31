@@ -385,15 +385,22 @@ Remapping keys is totally subjective, so I'll leave it at that.
 
 - ### Indentation
  `:set tabstop=2`: The amount of spaces a tab is equal to.
+
  `:set autoindent`: New lines inherit the indentation of previous lines.
+ 
  `:set expandtab`: Convert tabs to spaces.
+ 
  `:set shiftround`: When shifting lines, round the indentation to the nearest multiple of “shiftwidth.”
+
  `:set shiftwidth=2`: When shifting, indent using four spaces.
+
  `:set smarttab`: Insert “tabstop” number of spaces when the “tab” key is pressed.
+
 
 - ### Searching
 
  `:set ignorecase`: Ignore case when searching.
+
  `:set smartcase`: Automatically switch search to case-sensitive when search query contains an uppercase letter.
 
 ## Language specific functionality
