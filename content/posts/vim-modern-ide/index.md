@@ -136,6 +136,10 @@ Just add `Plug morhetz/gruvbox` before the `#plug end` to import the repo as a p
 
 After your plugin block, add `colorscheme gruvbox` on a new line to set the color scheme. Then do an `nvim +PlugInstall` from your terminal to once again install any new plugins. Reload nvim and you should see your color scheme change.
 
+![image](./vim-2.png)
+
+That looks a bit better.
+
 What I also like to do is change my terminal's background color to match the theme's background color. I'm using alacritty, so in this case, I'll edit my `.alacritty.yml` to use a background color of `#262626`.
 
 Now's also a decent time to add a few boilerplate settings. After your colorscheme declaration (or wherever, as long as it's not in the plugin import block), add the following:
@@ -148,12 +152,8 @@ syntax enable
 :set numberwidth=3
 ```
 
-
 Personally, I like relative line numbers for quicker, more accurate jumps between lines, but if you like seeing absolute line numbers, just use `:set number` instead of `:set relativenumber`.
 
-![image](./vim-2.png)
-
-That looks a bit better.
 
 - ### Adding a custom status line
 
@@ -474,7 +474,7 @@ If you followed the guide, you'll end up with something like this:
 
 ![image](./vim-3.png)
 
-> The source code for everything covered in this walkthrough is [here](https://github.com/jonathandannel/nvim)
+> The source code for everything covered in this walkthrough is located [here](https://github.com/jonathandannel/nvim).
 
 Hopefully now that you've seen first hand how extensible and cool vim can actually be (and not actually too troublesome to set up), you'll go off on your own and make your own sweet configuration and give it a try for a while. [VimAwesome](https://vimawesome.com/) is a great resource for exploring what else is out there and ready to be dropped into your config. 
 
