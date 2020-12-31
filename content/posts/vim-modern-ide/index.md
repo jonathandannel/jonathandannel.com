@@ -1,11 +1,11 @@
 ---
 title: How to switch to Vim and be happy
-description: It's not actually that hard
+description: A step by step guide
 author: "Jonathan Dannel"
-category: "code"
-cover: geo.jpg
-date: "2019-12-17T00:00:00.001Z"
-tags: ["workflow", "vim", "tmux", "ide"]
+category: "tutorial"
+cover: vim-3.png
+date: "2020-12-30T00:00:00.001Z"
+tags: ["workflow", "vim", "vim-plug", "tutorial", "guide", "neovim", "tmux", "i3", "setup"]
 ---
 
 I learned the very basics of vim a few years ago as a junior editing my first server config files over SSH. I honestly found it pretty arcane while using it to do anything meaningful (or upon being thrown into it during Git merges), which turned me off from it for a long time. However, ever so often along my professional journey, I would encounter the rare developer sporting an impressive vim + tmux setup that, as an uninitiated observer, seemed mystical and esoteric. Each time I witnessed the effortlessness in which these sorcerers could hop around large codebases, edit at superhuman speed, and multitask — all without a mouse or traditional GUI — I was inspired.
