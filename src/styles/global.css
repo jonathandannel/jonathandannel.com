@@ -59,7 +59,7 @@ pre[class*="language-"] {
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  font-size: 0.9em;
+  font-size: 0.85rem;
   line-height: 1.2em;
 
   -moz-tab-size: 4;
@@ -98,6 +98,7 @@ pre[class*="language-"] {
   overflow: auto;
   border: 1px solid #dddddd;
   background-color: white;
+  margin-bottom: 1.5em;
 }
 
 /* Inline code */
