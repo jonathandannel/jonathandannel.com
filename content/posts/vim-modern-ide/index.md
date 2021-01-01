@@ -393,7 +393,7 @@ Remapping keys is totally subjective, so I'll leave it at that.
  
  `:set shiftround`: When shifting lines, round the indentation to the nearest multiple of “shiftwidth.”
 
- `:set shiftwidth=2`: When shifting, indent using four spaces.
+ `:set shiftwidth=2`: When shifting, indent using x spaces.
 
  `:set smarttab`: Insert “tabstop” number of spaces when the “tab” key is pressed.
 
