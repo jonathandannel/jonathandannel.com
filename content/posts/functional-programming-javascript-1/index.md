@@ -8,7 +8,7 @@ date: "2021-04-13T00:00:00.001Z"
 tags: ["functional programming", "javascript"]
 ---
 
-As someone who has recently worked with [Clojure](https://clojure.org/) in depth for the first time, I realized that I have been bitten by the functional programming bug. There's something really elegant and satisfying about writing code in a purely functional mindset, and I've found myself approaching my 'native' language, Javascript, in much the same way. It turns out that Javascript is extremely well-suited to a functional style of programming, and I'd like to share some of the things I've learned along the way.
+Having recently worked with [Clojure](https://clojure.org/) in depth for the first time, I realized that I've been bitten by the functional programming bug. There's something really elegant and satisfying about writing code in a purely functional mindset, and I've found myself approaching my 'native' language, Javascript, in much the same way. It turns out that Javascript is extremely well-suited to a functional style of programming, and I'd like to share some of the things I've learned along the way.
 
 Functional programming isn't some mystical secret guarded by mathematicians working with Lisp anymore. Nearly every modern language has added support for anonymous functions, map/filter/reduce methods, and other goodies. Javascript is no different. It's actually become quite mainstream!
 
@@ -239,7 +239,7 @@ The second (optional) argument to reduce, besides the callback you provide, is a
 ```javascript
 const numbers = [3, 5, 7, 6];
 const add = (sum, number) => total + number;
-const sum = numbers.reduce(sum)
+const sum = numbers.reduce(add)
 console.log(sum); // 21
 ```
 
